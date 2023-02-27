@@ -14,8 +14,8 @@ import { Movies } from './Movies/Movies';
 export const App = () => {
   <Routes>
     <Route path="/" element={<Layout />}>
-      <Route path="home" element={<Home />}></Route>
-      <Route path="movies" element={<Movies />}></Route>
+      <Route path="home" element={<Home />} />
+      <Route path="movies" element={<Movies />} />
     </Route>
   </Routes>;
 };
