@@ -31,5 +31,5 @@ export const getCast = id => {
 export const getReviews = id => {
   return fetch(
     `${BASE_URL}/movie/${id}/reviews?api_key=${KEY}&language=${LANGUAGE}&page=1`
-  );
+  ).then(data => data.json());
 };
