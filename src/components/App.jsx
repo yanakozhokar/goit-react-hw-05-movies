@@ -12,10 +12,12 @@ import { Movies } from './Movies/Movies';
 // } from '../services/api';
 
 export const App = () => {
-  <Routes>
-    <Route path="/" element={<Layout />}>
-      <Route path="home" element={<Home />} />
-      <Route path="movies" element={<Movies />} />
-    </Route>
-  </Routes>;
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="home" element={<Home />} />
+        <Route path="movies" element={<Movies />} />
+      </Route>
+    </Routes>
+  );
 };
