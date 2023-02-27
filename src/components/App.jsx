@@ -4,7 +4,7 @@ import {
   getFullInfo,
   getCast,
   getReviews,
-} from '../api/api';
+} from '../services/api';
 
 export const App = () => {
   console.log();
