@@ -13,7 +13,7 @@ export const Reviews = () => {
       setReviews(reviews);
     };
     result(movieId);
-  }, []);
+  }, [movieId]);
 
   return (
     <ul className={css.reviewsList}>

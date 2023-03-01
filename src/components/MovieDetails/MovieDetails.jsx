@@ -25,7 +25,7 @@ const MovieDetails = () => {
       setGenres(genres.map(el => el.name).join(' '));
     };
     result(movieId);
-  }, []);
+  }, [movieId]);
 
   return (
     <>

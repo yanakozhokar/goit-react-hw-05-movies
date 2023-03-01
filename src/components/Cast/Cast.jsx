@@ -13,7 +13,7 @@ export const Cast = () => {
       setCast(actors);
     };
     result(movieId);
-  }, []);
+  }, [movieId]);
 
   return (
     <ul>
