@@ -1,0 +1,10 @@
+.header {
+  border-bottom: 2px solid rgb(188, 187, 187);
+}
+
+.navMenu {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

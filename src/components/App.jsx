@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
-import { Home } from './Home/Home';
-import { Movies } from './Movies/Movies';
+import { Home } from '../pages/Home/Home';
+import { Movies } from '../pages/Movies/Movies';
 import { MovieDetails } from './MovieDetails/MovieDetails';
 
 export const App = () => {

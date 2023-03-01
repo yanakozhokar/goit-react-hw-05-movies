@@ -1,0 +1,42 @@
+.main {
+  display: flex;
+  gap: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(188, 187, 187);
+}
+
+.posterContainer {
+  display: block;
+  width: 400px;
+}
+
+.poster {
+  width: 100%;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.subtitle {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.primaryText {
+  margin-top: 30px;
+}
+
+.additional {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(188, 187, 187);
+}
+
+.additionalList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
