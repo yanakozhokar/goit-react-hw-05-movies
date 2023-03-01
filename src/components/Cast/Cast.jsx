@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCast } from 'services/api';
+import { nanoid } from 'nanoid';
 
 export const Cast = () => {
   const { movieId } = useParams();
@@ -18,7 +19,7 @@ export const Cast = () => {
     <ul>
       {cast.map(({ id, character, name, profile_path }) => {
         return (
-          <li key={id}>
+          <li key={nanoid()}>
             <div className="imgContainer">
               {profile_path && (
                 <img
