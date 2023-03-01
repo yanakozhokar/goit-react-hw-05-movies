@@ -1,0 +1,9 @@
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviewsAuthor {
+  font-size: 18px;
+}

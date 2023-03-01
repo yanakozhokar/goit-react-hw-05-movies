@@ -4,7 +4,7 @@ import { GoBackButton } from 'components/GoBackButton/GoBackButton';
 import { getFullInfo } from 'services/api';
 import css from './MovieDetails.module.css';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [title, setTitle] = useState('');
   const [userScore, setUserScore] = useState(0);
   const [overview, setOverview] = useState('');
@@ -14,7 +14,7 @@ export const MovieDetails = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
-    const getInfo = async movieId => {
+    const result = async movieId => {
       const description = await getFullInfo(movieId);
       const { poster_path, original_title, vote_average, overview, genres } =
         description;
@@ -24,7 +24,7 @@ export const MovieDetails = () => {
       setOverview(overview);
       setGenres(genres.map(el => el.name).join(' '));
     };
-    getInfo(movieId);
+    result(movieId);
   }, []);
 
   return (
@@ -62,3 +62,5 @@ export const MovieDetails = () => {
     </>
   );
 };
+
+export default MovieDetails;

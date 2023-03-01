@@ -24,14 +24,12 @@ export const getFullInfo = async id => {
   return data;
 };
 
-// export const getCast = id => {
-//   return fetch(
-//     `${BASE_URL}/movie/${id}/credits?api_key=${KEY}&language=${LANGUAGE}`
-//   ).then(data => data.json());
-// };
+export const getCast = async id => {
+  const { data } = await moviesAPI.get(`/movie/${id}/credits`);
+  return data.cast;
+};
 
-// export const getReviews = id => {
-//   return fetch(
-//     `${BASE_URL}/movie/${id}/reviews?api_key=${KEY}&language=${LANGUAGE}&page=1`
-//   ).then(data => data.json());
-// };
+export const getReviews = async id => {
+  const { data } = await moviesAPI.get(`/movie/${id}/reviews`);
+  return data.results;
+};

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getMovies } from 'services/api';
 
-export const Movies = () => {
+const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const savedSearchParams = searchParams.get('query');
   const [query, setQuery] = useState('');
@@ -44,3 +44,5 @@ export const Movies = () => {
     </>
   );
 };
+
+export default Movies;
