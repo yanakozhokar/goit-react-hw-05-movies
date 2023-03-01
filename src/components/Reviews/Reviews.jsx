@@ -15,8 +15,6 @@ export const Reviews = () => {
     result(movieId);
   }, []);
 
-  console.log(reviews);
-
   return (
     <ul className={css.reviewsList}>
       {reviews.map(({ id, author, content }) => {
