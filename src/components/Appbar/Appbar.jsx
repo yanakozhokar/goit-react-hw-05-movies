@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom';
+import { Suspense } from 'react';
+import { NavLink, Outlet } from 'react-router-dom';
 import css from './Appbar.module.css';
 
 export const Appbar = () => {
@@ -10,6 +11,9 @@ export const Appbar = () => {
           <NavLink to="movies">Movies</NavLink>
         </nav>
       </header>
+      <Suspense>
+        <Outlet />
+      </Suspense>
     </>
   );
 };

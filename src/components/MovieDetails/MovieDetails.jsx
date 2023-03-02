@@ -15,17 +15,21 @@ const MovieDetails = () => {
 
   useEffect(() => {
     const result = async movieId => {
-      const description = await getFullInfo(movieId);
-      const { poster_path, original_title, vote_average, overview, genres } =
-        description;
-      setPoster('https://image.tmdb.org/t/p/w500/' + poster_path);
-      setTitle(original_title);
-      setUserScore(Math.round((Number(vote_average) * 100) / 10));
-      setOverview(overview);
-      setGenres(genres.map(el => el.name).join(' '));
+      const data = await getFullInfo(movieId);
+      helper(data);
     };
     result(movieId);
   }, [movieId]);
+
+  const helper = data => {
+    const { poster_path, original_title, vote_average, overview, genres } =
+      data;
+    setPoster('https://image.tmdb.org/t/p/w500/' + poster_path);
+    setTitle(original_title);
+    setUserScore(Math.round((Number(vote_average) * 100) / 10));
+    setOverview(overview);
+    setGenres(genres.map(el => el.name).join(' '));
+  };
 
   return (
     <>
