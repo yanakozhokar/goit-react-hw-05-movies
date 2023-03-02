@@ -1,0 +1,23 @@
+.actorsList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.actorsItem {
+  width: 200px;
+}
+
+.imgContainer {
+  width: 200px;
+  height: 300px;
+  background-color: rgb(223, 221, 221);
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
